@@ -15,10 +15,10 @@ POST: http://localhost:4000/inicio
 
         body: {  
           "id": 4,
-          "imagen": "Canchita",
-          "textoImagen": "Av. independencia 34, Tandil",          
+          "imagen": "url",
+          "textoImagen": "texto",          
           "video": "url",
-          "textoVideo": "url",
+          "textoVideo": "texto",
         }
 
 
