@@ -15,31 +15,31 @@ POST: http://localhost:4000/inicio
 
         body: {  
           "id": 4,
-          "Hotel": "Canchita",
-          "ubicHotel": "Av. independencia 34, Tandil",          
-          "fotosHotel": "url",
-          "videoHotel": "url",
+          "imagen": "Canchita",
+          "textoImagen": "Av. independencia 34, Tandil",          
+          "video": "url",
+          "textoVideo": "url",
         }
 
 
-GET by id: http://localhost:4001/viaje/id
+GET by id: http://localhost:4000/inicio/id
 
 
-PUT http://localhost:4001/viaje/id
+PUT http://localhost:4000/inicio/id
 
 
     body: { //info a modificar ej:
-        "ultimaUbic": "aca van las coordenadas"
+        "textoVideo": "texto"
     }
 
     
-DELETE http://localhost:4001/viaje/id
+DELETE http://localhost:4000/inicio/id
 
 
 Variable de entorno para el archivo .env
 
 
-PORT='4001'
+PORT='4000'
 DB_USER ='postgres'
 DB_NAME = 'postgres'
 DB_PORT = '5433'
