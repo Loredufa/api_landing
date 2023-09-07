@@ -14,11 +14,9 @@ POST: http://localhost:4000/inicio
 
 
         body: {  
-          "id": 4,
           "imagen": "url",
-          "textoImagen": "texto",          
-          "video": "url",
-          "textoVideo": "texto",
+          "texto": "texto",          
+          "activo": "true",
         }
 
 
