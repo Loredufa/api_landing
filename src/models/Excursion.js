@@ -12,19 +12,11 @@ module.exports = function(sequelize) {
     nombre: {
       type: DataTypes.STRING,
       allowNull: false,
-<<<<<<< HEAD
-      },
-    descripcion: {
-      type:DataTypes.STRING,
-      allowNull:true,
-    },
-=======
     },
     descripcion: {
       type:DataTypes.STRING,
       allowNull:true,
     },   
->>>>>>> 99c3b6d333927434ecee4e2e1604eb52b3277475
     ubicacion: {
       type:DataTypes.STRING,
       allowNull:true,
