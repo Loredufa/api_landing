@@ -5,7 +5,7 @@ Esta api maneja todo lo relativo a la pagina de inicio donde se mostraran promoc
 
 
 **Rutas :
-
+**Imagenes**
 
 GET: http://localhost:4000/inicio 
 
@@ -15,7 +15,7 @@ POST: http://localhost:4000/inicio
 
         body: {  
           "imagen": "url",
-          "texto": "texto",          
+          "folleto": "url",          
           "activo": "true",
         }
 
@@ -32,6 +32,11 @@ PUT http://localhost:4000/inicio/id
 
     
 DELETE http://localhost:4000/inicio/id
+
+**Textos**
+
+
+**Formulario de contacto**
 
 
 Variable de entorno para el archivo .env
