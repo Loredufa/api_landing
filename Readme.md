@@ -16,7 +16,7 @@ POST: http://localhost:4000/inicio
         body: {  
           "imagen": "url",
           "folleto": "url",          
-          "activo": "true",
+          "activo": "true"
         }
 
 
@@ -34,6 +34,32 @@ PUT http://localhost:4000/inicio/id
 DELETE http://localhost:4000/inicio/id
 
 **Textos**
+
+
+GET: http://localhost:4000/texto
+
+
+POST: http://localhost:4000/texto
+
+
+        body: {  
+          "texto": "url",      
+          "activo": "true"
+        }
+
+
+GET by id: http://localhost:4000/texto/id
+
+
+PUT http://localhost:4000/texto/id
+
+
+    body: { //info a modificar ej:
+        "texto": "texto"
+    }
+
+    
+DELETE http://localhost:4000/inicio/id
 
 
 **Formulario de contacto**
