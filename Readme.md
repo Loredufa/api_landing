@@ -38,6 +38,20 @@ DELETE http://localhost:4000/inicio/id
 
 **Formulario de contacto**
 
+POST http://localhost:4000/contacto
+    body: {
+      "nombre": "Jazmin",
+      "mail": "jdn@gmail.com",
+      "telefono": "2323-9897",
+      "comentario": "9xnckdhfudfhgiudfhgkjxbvkdzhgfuidhgkuhdfkvbmxc",
+      "horario": "9 a 18"
+    }
+
+
+GET http://localhost:4000/contacto
+
+
+
 
 Variable de entorno para el archivo .env
 
