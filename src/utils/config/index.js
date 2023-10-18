@@ -9,5 +9,9 @@ module.exports = {
     host : process.env.HOST,
     PORT : process.env.PORT,
     secretKey : process.env.SECRET_KEY,
-    mailPass: process.env.MAIL_PASSWORD
+    mailPass: process.env.MAIL_PASSWORD,
+    Bucket_name :process.env.BUCKET_NAME, 
+    aws_access_key_id :process.env.AWS_ACCESS_KEY_ID, 
+    aws_access_secret_key : process.env.AWS_SECRET_ACCESS_KEY,
+    s3_endpoint : process.env.S3_ENDPOINT
 }

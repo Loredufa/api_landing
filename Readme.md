@@ -33,6 +33,20 @@ PUT http://localhost:4000/inicio/id
     
 DELETE http://localhost:4000/inicio/id
 
+Para subir una imagen a Digital Ocean
+POST: http://localhost:4000/spaces
+  body:
+      {
+        "image" : "archivo"
+      }
+
+Para eliminar una imagen en Digital Ocean
+PUT: http://localhost:4000/spaces
+  body:
+      {
+        "image" : "url_imagen"
+      }
+
 **Textos**
 
 
