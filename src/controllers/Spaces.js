@@ -14,7 +14,7 @@ const uploadFile = async (req, res) => {
   console.log(req.files)
     const {image} = req.files
     const timestamp = Date.now(); // Obtiene la marca de tiempo actual en milisegundos
-    const uniqueIdentifier = `${image.name}-${timestamp}`;
+    const uniqueIdentifier = `${timestamp}-${image.name}`;
     console.log('SOY DATE', uniqueIdentifier)
     try {
       const uploadObject = await s3.putObject({
