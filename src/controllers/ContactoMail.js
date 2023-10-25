@@ -11,14 +11,14 @@ const conectionMail = async (req, res, info) => {
             port: 465,
             secure: true,
             auth: {
-                user: 'cuyenreset@gmail.com',
-                pass: config.mailPass
+                user: config.mail_cuyen,
+                pass: config.mailPass || ''
                 }
             });
         //Armado del correo a envar
         const mailOptions = {
             from: `Contacto app-Cuyen`,
-            to: "lorenadufaur@gmail.com",
+            to: config.mail_contacto || '',
             subject: 'Alguien te quiere contactar desde la aplicación',
             text: 'Tienes la siguiente consulta ' + JSON.stringify(info)
         }
