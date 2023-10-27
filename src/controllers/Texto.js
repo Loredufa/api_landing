@@ -8,6 +8,27 @@ const getAllText = async (req, res) => {
 }
 }
 
+const getTextByOrder = async (req, res) => {
+  try {
+    const info = await Landing_text.findAll();
+
+    if (info) {
+      // Filtra elementos activos
+      const activos = info.filter(e => e.dataValues.activo === 'true');
+      // Ordena de menor a mayor
+      activos.sort((a, b) => parseInt(a.dataValues.posicion) - parseInt(b.dataValues.posicion));
+      res.status(200).send(activos);
+    } else {
+      res.status(400).send({ message: 'No se encontraron datos' });
+    }
+  } catch (error) {
+    console.log("Algo salió mal: ", error);
+    res.status(500).send({ message: 'Error en el servidor' });
+  }
+}
+
+
+
 const addText = async (req,res) => {
   try {
     const info = req.body
@@ -61,6 +82,7 @@ module.exports = {
     addText,
     getTextById,
     putText,
-    deleteText
+    deleteText,
+    getTextByOrder
 
 }

@@ -1,7 +1,15 @@
 const { Landing } = require('../models/index')
 
-//Agregar que envíe solo las activas y en orden de posicion
+
 const getAllInicio = async (req, res) => {
+  try {
+    const info = await Landing.findAll()
+    info? res.status(200).send(info) : res.status(400).send({ message: 'No se encontraron datos' })
+  } catch (error) { console.log("Algo salio mal: ", error); 
+}
+}
+
+const getInicioByOrder = async (req, res) => {
   try {
     const info = await Landing.findAll();
     console.log('SOY INFO', info);
@@ -79,6 +87,7 @@ module.exports = {
     getInicioById,
     addInicio,
     putInicio,
-    deleteInicio
+    deleteInicio,
+    getInicioByOrder
 
 }

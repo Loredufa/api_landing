@@ -10,6 +10,11 @@ Esta api maneja todo lo relativo a la pagina de inicio donde se mostraran promoc
 GET: http://localhost:4000/inicio 
 
 
+Obtener las imágenes activas por orden de posición
+
+GET http://localhost:4000/inicio/order
+
+
 POST: http://localhost:4000/inicio 
 
 
