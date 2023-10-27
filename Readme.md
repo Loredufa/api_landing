@@ -15,7 +15,8 @@ POST: http://localhost:4000/inicio
 
         body: {  
           "imagen": "url",
-          "folleto": "url",          
+          "folleto": "url",    
+          "posicion": "1",      
           "activo": "true"
         }
 
@@ -57,7 +58,7 @@ POST: http://localhost:4000/texto
 
 
         body: {  
-          "texto": "url",      
+          "texto": "xxx",      
           "activo": "true"
         }
 
