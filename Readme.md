@@ -12,7 +12,7 @@ GET: http://localhost:4000/inicio
 
 Obtener las imágenes activas por orden de posición
 
-GET http://localhost:4000/inicio/order
+GET: http://localhost:4000/inicio/order
 
 
 POST: http://localhost:4000/inicio 
@@ -57,6 +57,10 @@ PUT: http://localhost:4000/spaces
 
 
 GET: http://localhost:4000/texto
+
+
+Obtener los testos activos en orden de posicion
+GET: http://localhost:4000/inicio/order
 
 
 POST: http://localhost:4000/texto
