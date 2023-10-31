@@ -8,7 +8,7 @@ const textoRoute = require('./getText');
 const spacesRoute = require('./getSpacesFile');
 
 
-router.use('/landing/inicio', verifyToken, inicioRoute)
+router.use('/login', verifyToken, inicioRoute)
 router.use('/landing/contacto', verifyToken, mailRoute)
 router.use('/landing/texto', verifyToken, textoRoute)
 router.use('/landing/spaces', spacesRoute)
