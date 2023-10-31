@@ -59,8 +59,8 @@ PUT: http://localhost:4000/spaces
 GET: http://localhost:4000/texto
 
 
-Obtener los testos activos en orden de posicion
-GET: http://localhost:4000/inicio/order
+Obtener los textos activos en orden de posicion
+GET: http://localhost:4000/texto/order
 
 
 POST: http://localhost:4000/texto
