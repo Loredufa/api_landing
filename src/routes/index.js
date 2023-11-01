@@ -11,7 +11,7 @@ const spacesRoute = require('./getSpacesFile');
 router.use('/inicio', verifyToken, inicioRoute)
 router.use('/contacto', verifyToken, mailRoute)
 router.use('/texto', verifyToken, textoRoute)
-router.use('/spaces', spacesRoute)
+router.use('/spacesbo', spacesRoute)
 
 
 module.exports = router;
