@@ -12,7 +12,11 @@ const Hotels = require('./Hotel')
 const Forms = require('./Form')
 const Landing_texts = require('./Landing_text')
 
-const sequelize = new Sequelize(`postgres://${dbUser}:${dbPassword}@${dbHost}/${dbName}`);
+const sequelize = new Sequelize(`postgres://${dbUser}:${dbPassword}@${dbHost}/${dbName}`, {
+    logging: (sql, timing) => {
+        console.log(sql); // imprime las consultas SQL en la consola
+      },
+})
 
 const Travel = Travels(sequelize)
 const Landing = Landings(sequelize)
