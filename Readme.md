@@ -19,7 +19,7 @@ POST: http://localhost:4000/inicio
 
 
         body: {  
-          "imagen": "url",
+          "image": "url",
           "folleto": "url",    
           "posicion": "1",      
           "activo": "true"
@@ -33,14 +33,14 @@ PUT http://localhost:4000/inicio/id
 
 
     body: { //info a modificar ej:
-        "textoVideo": "texto"
+        "image": "url"
     }
 
     
 DELETE http://localhost:4000/inicio/id
 
 Para subir una imagen a Digital Ocean
-POST: http://localhost:4000/spaces
+POST: http://localhost:4000/spacesbo
   body:
       {
         "image" : "archivo"
