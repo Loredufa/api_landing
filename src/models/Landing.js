@@ -4,8 +4,6 @@ const { DataTypes } = require('sequelize');
 module.exports = function(sequelize) {
   // defino el modelo
   return sequelize.define('landing', {
-    // Agrego la propiedad schema
-    schema: 'public',
     id:  {
       type: DataTypes.INTEGER,
       autoIncrement: true,
