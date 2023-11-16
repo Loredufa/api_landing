@@ -3,7 +3,7 @@ const { Landing_text } = require('../models/index')
 const getAllText = async (req, res) => {
   try {
     const info = await Landing_text.findAll()
-    info? res.status(200).send(info) : res.status(400).send({ message: 'No se encontraron datos' })
+    info? res.status(200).send(JSON.stringify(info)) : res.status(400).send({ message: 'No se encontraron datos' })
   } catch (error) { console.log("Algo salio mal: ", error); 
 }
 }
@@ -17,7 +17,7 @@ const getTextByOrder = async (req, res) => {
       const activos = info.filter(e => e.dataValues.activo === 'true');
       // Ordena de menor a mayor
       activos.sort((a, b) => parseInt(a.dataValues.posicion) - parseInt(b.dataValues.posicion));
-      res.status(200).send(activos);
+      res.status(200).send(JSON.stringify(activos));
     } else {
       res.status(400).send({ message: 'No se encontraron datos' });
     }

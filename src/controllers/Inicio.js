@@ -4,7 +4,7 @@ const { Landing } = require('../models/index')
 const getAllInicio = async (req, res) => {
   try {
     const info = await Landing.findAll()
-    info? res.status(200).send(info) : res.status(400).send({ message: 'No se encontraron datos' })
+    info? res.status(200).send(JSON.stringify(info)) : res.status(400).send({ message: 'No se encontraron datos' })
   } catch (error) { console.log("Algo salio mal: ", error); 
 }
 }
@@ -12,18 +12,12 @@ const getAllInicio = async (req, res) => {
 const getInicioByOrder = async (req, res) => {
   try {
     const info = await Landing.findAll();
-    console.log('SOY INFO', info);
-
     if (info) {
-      // Filtrar elementos activos
+      // Filtra elementos activos
       const activos = info.filter(e => e.dataValues.activo === 'true');
-      console.log('SOY ACTIVOS', activos);
-
-      // Ordenar de menor a mayor, si es necesario
+      // Ordena de menor a mayor
       activos.sort((a, b) => parseInt(a.dataValues.posicion) - parseInt(b.dataValues.posicion));
-      console.log('SOY ORDEN', activos);
-
-      res.status(200).send(activos);
+      res.status(200).send(JSON.stringify(activos));
     } else {
       res.status(400).send({ message: 'No se encontraron datos' });
     }

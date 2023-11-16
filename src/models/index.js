@@ -12,9 +12,7 @@ const Hotels = require('./Hotel')
 const Forms = require('./Form')
 const Landing_texts = require('./Landing_text')
 
-const sequelize = new Sequelize(`postgres://${dbUser}:${dbPassword}@${dbHost}/${dbName}`, {
-    logging: console.log, // imprime las consultas SQL en la consola
-})
+const sequelize = new Sequelize(`postgres://${dbUser}:${dbPassword}@${dbHost}/${dbName}`);
 
 const Travel = Travels(sequelize)
 const Landing = Landings(sequelize)
@@ -30,13 +28,11 @@ const Landing_text = Landing_texts(sequelize)
 
 
 //Relaciones
-
-
 Travel.hasMany(Contract)
 Contract.belongsTo(Travel, { foreignKey: 'travelId' }); // coloca travelId en contract
 
-Contract.hasMany(Passenger)
-Passenger.belongsTo (Contract) // coloca Contract_id en Passenger
+// Contract.hasMany(Passenger)
+// Passenger.belongsTo (Contract) // coloca Contract_id en Passenger
 
 Travel.hasMany(Wall)
 Wall.belongsTo (Travel, { foreignKey: 'travelId' }) // coloca TravelId en Wall

@@ -58,7 +58,7 @@ const getAllcontactos= async (req, res) => {
     try {
       const contactos = await Form.findAll()
       contactos.length > 0
-      ? res.status(200).send(contactos)
+      ? res.status(200).send(JSON.stringify(contactos))
       : res.status(400).send({ message: 'No se encontraron contactos' });
     } catch (error) { console.log("Algo salio mal: ", error); 
   }
