@@ -100,6 +100,8 @@ POST http://localhost:4000/contacto
 
 GET http://localhost:4000/contacto
 
+DELETE: http://localhost:4000/contacto/:id
+
 
 
 

@@ -64,7 +64,23 @@ const getAllcontactos= async (req, res) => {
   }
   }
 
+const deleteContactos= async (req, res) => {
+    try {
+        const id = req.params.id
+        const deleteFrom = await Form.destroy({
+          where: {
+            id,
+          },
+        })
+        deleteFrom? res.status(200).send({message:'Contacto eliminado'}) :
+        res.status(401).send({message:'No se pudo eliminar el contacto'}) 
+        }
+        catch (error) { console.log("Algo salio mal: ", res.send(error)); 
+      }
+  }
+
 module.exports = {
     sendMailContact,
-    getAllcontactos
+    getAllcontactos,
+    deleteContactos
 }
