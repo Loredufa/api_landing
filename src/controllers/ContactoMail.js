@@ -79,8 +79,24 @@ const deleteContactos= async (req, res) => {
       }
   }
 
+const putContactos= async (req, res) => {
+  try {
+    const id = req.params.id
+    const info = req.body
+    const updateInfo = await Form.update(info, {
+      where: {
+        id,
+      },
+    })
+    updateInfo[0] !== 0? res.status(200).send({message:'Contacto actualizado'}) : 
+    res.status(401).send({message:'No se puede actualizar el contacto'});
+  } catch (error) { console.log("Algo salio mal: ", error); 
+}
+}
+
 module.exports = {
     sendMailContact,
     getAllcontactos,
-    deleteContactos
+    deleteContactos,
+    putContactos
 }

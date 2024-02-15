@@ -1,11 +1,12 @@
 const { Router } = require('express');
-const {sendMailContact, getAllcontactos, deleteContactos} = require('../controllers/ContactoMail')
+const {sendMailContact, getAllcontactos, deleteContactos, putContactos} = require('../controllers/ContactoMail')
 
 const router = Router();
 
 router.post('/', sendMailContact);
-router.get('/', getAllcontactos)
-router.delete('/:id', deleteContactos)
+router.get('/', getAllcontactos);
+router.put('/', putContactos);
+router.delete('/:id', deleteContactos);
 
 
 
