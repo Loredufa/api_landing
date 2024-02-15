@@ -5,7 +5,7 @@ const router = Router();
 
 router.post('/', sendMailContact);
 router.get('/', getAllcontactos);
-router.put('/', putContactos);
+router.put('/:id', putContactos);
 router.delete('/:id', deleteContactos);
 
 
