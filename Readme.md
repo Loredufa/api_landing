@@ -103,7 +103,22 @@ GET http://localhost:4000/contacto
 DELETE: http://localhost:4000/contacto/:id
 
 
+***Versionado***
+Para obtener todas las versiones guardadas
 
+GET http://localhost:4000/version
+
+Para obtener la version por id
+GET http://localhost:4000/version/:id
+
+Para crear una version
+POST http://localhost:4000/version
+
+Para modificar una version 
+PUT http://localhost:4000/version/:id
+
+Para eliminar una version 
+DELETE http://localhost:4000/version/:id
 
 Variable de entorno para el archivo .env
 
