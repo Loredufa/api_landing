@@ -21,7 +21,7 @@ const getVersionById = async (req, res, next) => {
   try {
     const id = req.params.id
     const info = await Version.findByPk(id)
-    const version = `${info.major}.${info.minor}`;
+    const version = {version: `${info.major}.${info.minor}`, url: info.url};
     info? res.status(200).send(version) : res.status(400).send({ message: 'No se encontró la versión' })
   } catch (error) { console.log("Algo salio mal: ", error); 
 }
