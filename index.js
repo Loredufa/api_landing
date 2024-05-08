@@ -34,7 +34,7 @@ app.use(fileUpload({
 app.use('/', routes);
 
 //Servidor
-conn.sync({force:true}).then(() => {
+conn.sync({force:false}).then(() => {
   console.log('Base de datos conectada')
   app.listen(PORT, () => {
     console.log(`Servidor corriendo en puerto ${PORT}`)
