@@ -13,6 +13,10 @@
 
 /env
 
+dockerignore
+.dockerignore
+Dockerfile
+
 # misc
 .DS_Store
 .env
