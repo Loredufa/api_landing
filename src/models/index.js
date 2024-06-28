@@ -12,6 +12,7 @@ const Hotels = require('./Hotel')
 const Forms = require('./Form')
 const Landing_texts = require('./Landing_text')
 const Versions = require('./Version')
+const Financings = require('./Financing')
 
 const sequelize = new Sequelize(`postgres://${dbUser}:${dbPassword}@${dbHost}/${dbName}`, {
   pool: {
@@ -34,6 +35,7 @@ const Hotel = Hotels(sequelize)
 const Form = Forms(sequelize)
 const Landing_text = Landing_texts(sequelize)
 const Version = Versions(sequelize)
+const Financing = Financings(sequelize)
 
 
 //Relaciones
@@ -55,6 +57,9 @@ Travel.belongsTo (Hotel, { foreignKey: 'hotelId' }) // coloca hotelId en travel
 Schedule.hasMany(Travel) 
 Travel.belongsTo (Schedule, { foreignKey: 'scheduleId' }) //  coloca scheduleId en travel
 
+Financing.hasMany(Contract);
+Contract.belongsTo(Financing, { foreignKey: 'financingId' }); //  coloca financingId en contract
+
 Passenger.belongsToMany(Login, {through : "Passenger_Login"});
 Login.belongsToMany(Passenger, {through : "Passenger_Login"}); //crea una tabla intermedia
 
@@ -73,5 +78,6 @@ module.exports = {
     Landing_text,
     Form,
     Version,
-    sequelize
+    sequelize,
+    Financing
 }
